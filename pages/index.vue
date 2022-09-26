@@ -1,14 +1,14 @@
+<script setup lang="ts">
+    definePageMeta({
+        layout: 'header',
+    })
+</script>
+
 <template>
-  <div>
-    <Logos mb-6 />
-    <Suspense>
-      <PageView />
-      <template #fallback>
-        <div op50 italic>
-          <span animate-pulse>Loading...</span>
-        </div>
-      </template>
-    </Suspense>
-    <InputEntry />
-  </div>
+    <main flex="~ flex-col" h-full gap-3>
+        <OShowcaseSection />
+        <OCollectionArtwork />
+        <OBestSeller></OBestSeller>
+        <OExplore></OExplore>
+    </main>
 </template>
