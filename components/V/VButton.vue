@@ -15,15 +15,15 @@
     })
 
     const getPositionIcon = computed(() => {
-        if (props.positionIcon === 'right') return 'row-reverse'
-        else if (props.positionIcon === 'left') return 'row'
+        if (props.positionIcon === 'right') return 'row'
+        else if (props.positionIcon === 'left') return 'row-reverse'
     })
 </script>
 
 <template>
     <button :type="props.buttonType" :class="{ roundClass: round }">
         <slot></slot>
-        <slot name="icon"> </slot>
+        <slot name="icon"></slot>
     </button>
 </template>
 
@@ -31,6 +31,7 @@
     button {
         padding: 0.5em 1em;
         display: flex;
+        width: fit-content;
         align-items: center;
         gap: 1rem;
         flex-direction: v-bind(getPositionIcon);

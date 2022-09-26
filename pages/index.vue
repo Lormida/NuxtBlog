@@ -6,9 +6,9 @@
 
 <template>
     <main flex="~ flex-col" h-full gap-3>
-        <OShowcaseSection />
-        <OCollectionArtwork />
-        <OBestSeller></OBestSeller>
-        <OExplore></OExplore>
+        <OrganismShowcaseSection />
+        <OrganismCollectionArtwork />
+        <OrganismBestSeller />
+        <OrganismExplore />
     </main>
 </template>

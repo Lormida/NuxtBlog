@@ -7,12 +7,16 @@
 
 <template>
     <div class="container">
-        <OGlobalHeaderOrganism />
+        <OrganismGlobalHeader />
         <slot />
     </div>
 </template>
 <style lang="scss" scoped>
     .container {
-        @apply max-w-[1440px] h-full bg-main w-4/5 bg-main-accent;
+        box-shadow: rgba(var(--reflectShadow), 0.2) -5px 5px, rgba(var(--reflectShadow), 0.15) -10px 10px,
+            rgba(var(--reflectShadow), 0.1) -15px 15px, rgba(var(--reflectShadow), 0.05) -20px 20px,
+            rgba(var(--reflectShadow), 0.025) -25px 25px;
+
+        @apply max-w-[1440px] h-full w-4/5 bg-main-accent my-5 rounded-b-lg;
     }
 </style>

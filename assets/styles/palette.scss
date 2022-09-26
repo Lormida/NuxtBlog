@@ -284,6 +284,8 @@ html[opacity="lowOpacity"] {
 }
 // Override variables for light theme
 :root {
+    --neutral: var(--neutral-500);
+
     --btnMain: var(--blue-500);
     --btnMainPale: var(--blue-200);
 
@@ -292,13 +294,17 @@ html[opacity="lowOpacity"] {
 
     --btnSecondary: var(--violet-800);
     --btnSecondaryPale: var(--violet-300);
+    --reflectShadow: 178,152,220;
+    // --reflectShadow: 188,71,73;
+    // --reflectShadow: 193,18,31; // scarlet
+    // --reflectShadow: 204,255,51; // lime
 }
 
 html.light {
-    --neutral: var(--neutral-500);
 
-    --main: var(--light-200);
     --mainAccent: var(--white);
+    --main: var(--light-300);
+    --mainWeakAnti: var(--light-500);
 
     --antiMain: var(--dark-900);
     --antiMainAccent: var(--black);
@@ -306,10 +312,10 @@ html.light {
 
 // Override variables for dark theme
 html.dark {
-    --neutral: var(--neutral-500);
 
-    --main: var(--dark-900);
     --mainAccent: var(--black);
+    --main: var(--dark-900);
+    --mainWeakAnti: var(--dark-700);
 
     --antiMain: var(--light-50);
     --antiMainAccent: var(--white);

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <header class="flex w-full justify-between border-b-2">
+    <header class="flex w-full justify-between">
         <div class="grid-structure gap-[1em] grid-rows-2 grid py-3 justify-items-center">
             <slot name="logo"></slot>
         </div>

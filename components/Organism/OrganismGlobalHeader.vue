@@ -8,15 +8,15 @@
 </script>
 
 <template>
-    <TGlobalHeaderTemplate class="bg-main">
+    <TemplateGlobalHeader class="bg-main-weak-anti border-b px-5 border-neutral rounded-t-lg">
         <template #logo>
             <span class="i-carbon-3d-print-mesh text-anti-main text-4xl"></span>
             <p class="text-4xl text-anti-main font-bold">Cyber Blog</p>
-            <MTogglerThemeMolecule col-span-2 />
+            <MoleculeTogglerTheme col-span-2 />
         </template>
 
         <template #menu>
-            <AMenuItemAtom
+            <AtomMenuItem
                 v-for="menuItem in menuItems"
                 :key="menuItem.name"
                 :name="menuItem.name"
@@ -34,7 +34,7 @@
                 Login
             </VButton>
         </template>
-    </TGlobalHeaderTemplate>
+    </TemplateGlobalHeader>
 </template>
 
 <style lang="scss" scoped>
