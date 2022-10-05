@@ -5,10 +5,8 @@
 </script>
 
 <template>
-    <main flex="~ flex-col" h-full gap-3>
+    <main flex="~ col" h-full gap-y-32>
         <OrganismShowcaseSection />
-        <OrganismCollectionArtwork />
-        <OrganismBestSeller />
-        <OrganismExplore />
+        <OrganismPost />
     </main>
 </template>

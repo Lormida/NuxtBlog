@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { transformerDirectives, transformerVariantGroup } from 'unocss'
 
 export default defineNuxtConfig({
-    modules: ['@vueuse/nuxt', '@unocss/nuxt', '@pinia/nuxt'],
+    modules: ['@vueuse/nuxt', '@unocss/nuxt', '@pinia/nuxt', '@nuxtjs/supabase'],
     unocss: {
         // presets
         preflight: true,
@@ -35,11 +37,11 @@ export default defineNuxtConfig({
                 antiMain: 'rgba(var(--antiMain))',
                 antiMainAccent: 'rgba(var(--antiMainAccent))',
                 btnMain: 'rgba(var(--btnMain))',
-                btnMainPale: 'rgba(var(--btnMainPale))',
+                btnMainLight: 'rgba(var(--btnMainLight))',
                 badgeMain: 'rgba(var(--badgeMain))',
-                badgeMainPale: 'rgba(var(--badgeMainPale))',
+                badgeMainLight: 'rgba(var(--badgeMainLight))',
                 btnSec: 'rgba(var(--btnSec))',
-                btnSecPale: 'rgba(var(--btnSecPale))',
+                btnSecLight: 'rgba(var(--btnSecLight))',
             },
         },
     },

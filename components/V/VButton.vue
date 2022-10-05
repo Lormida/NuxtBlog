@@ -4,6 +4,7 @@
         round?: boolean
         color?: string
         bgColor?: string
+        borderOn?: boolean
         positionIcon?: 'left' | 'right'
     }
     const props = withDefaults(defineProps<Props>(), {
@@ -11,6 +12,7 @@
         round: false,
         color: '#fff',
         bgColor: '#222',
+        borderOn: false,
         positionIcon: 'right',
     })
 
@@ -21,7 +23,7 @@
 </script>
 
 <template>
-    <button :type="props.buttonType" :class="{ roundClass: round }">
+    <button :type="props.buttonType" :class="{ roundClass: round, borderOn }">
         <slot></slot>
         <slot name="icon"></slot>
     </button>
@@ -38,7 +40,6 @@
         color: v-bind(color);
         background-color: v-bind(bgColor);
         transition: all 0.3s ease-in-out;
-        border: 2px solid transparent;
         &:hover {
             color: v-bind(bgColor);
             background-color: v-bind(color);
@@ -47,5 +48,8 @@
     }
     .roundClass {
         border-radius: 0.75em;
+    }
+    .borderOn:hover {
+        border-color: v-bind(bgColor);
     }
 </style>

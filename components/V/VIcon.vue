@@ -11,7 +11,7 @@
         bgColor: '#222',
         size: '2rem',
     })
-    const getRounded = computed(()=>{
+    const getRounded = computed(() => {
         if (props.rounded) return '100%'
         return '5%'
     })

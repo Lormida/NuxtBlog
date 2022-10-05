@@ -19,7 +19,7 @@
                         <template #icon>
                             <span i-carbon-direction-straight-right></span>
                         </template>
-                        Explore
+                        Post
                     </VButton>
                 </div>
                 <div class="flex justify-between max-w-[450px] w-full">
