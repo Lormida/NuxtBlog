@@ -11,7 +11,7 @@
                     </p>
                     <VButton
                         border-2
-                        border-on
+                        p="x-14 y-5"
                         class="font-semibold text-2xl"
                         color="rgba(var(--main))"
                         bg-color="rgba(var(--btnMain))"

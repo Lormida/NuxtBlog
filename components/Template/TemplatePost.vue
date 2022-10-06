@@ -33,6 +33,7 @@
                         :key="filter"
                         round
                         font-medium
+                        p="x-6 y-2"
                         color="rgba(var(--neutral))"
                         bg-color="rgba(var(--main))"
                         border="1 neutral"
@@ -110,8 +111,8 @@
                         :key="controlButton.text"
                         :color="controlButton.color"
                         :bg-color="controlButton.bgColor"
-                        border-on
                         round
+                        p="x-12 y-3"
                         position-icon="left"
                         border-2
                         font-semibold

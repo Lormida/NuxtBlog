@@ -29,7 +29,6 @@
 
 <style lang="scss" scoped>
     button {
-        padding: 0.5em 1em;
         display: flex;
         width: fit-content;
         align-items: center;

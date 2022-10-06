@@ -31,6 +31,7 @@
             />
             <VButton
                 border-2
+                p="x-6 y-3"
                 bg-color="rgba(var(--btnMain))"
                 color="rgba(var(--main)"
                 text-2xl

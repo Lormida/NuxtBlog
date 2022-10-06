@@ -1,17 +1,15 @@
 <script setup lang="ts">
     interface Props {
-        rounded?: boolean
+        round?: boolean
         border?: boolean
         color?: string
         bgColor?: string
-        fontSize?: string
     }
     const props = withDefaults(defineProps<Props>(), {
-        rounded: false,
+        round: false,
         border: false,
         color: '#fff',
         bgColor: '#222',
-        fontSize: '20px',
     })
 
     const getBorderColor = computed(() => {
@@ -21,7 +19,7 @@
 </script>
 
 <template>
-    <div :class="{ roundedClass: rounded }">
+    <div :class="{ roundClass: round }">
         <slot></slot>
     </div>
 </template>
@@ -34,7 +32,6 @@
         align-items: center;
         color: v-bind(color);
         background-color: v-bind(bgColor);
-        font-size: v-bind(fontSize);
         transition: all 0.3s ease-in-out;
         border-width: 2px;
         border-style: solid;
@@ -45,7 +42,7 @@
             transform: scale(1.05, 0.96);
         }
     }
-    .roundedClass {
+    .roundClass {
         border-radius: 0.5em;
     }
 </style>

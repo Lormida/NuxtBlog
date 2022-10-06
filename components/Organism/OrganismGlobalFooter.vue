@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <TemplateGlobalFooter mt-50>
+    <TemplateGlobalFooter mt-60>
         <template #social-media>
             <p text="2xl left anti-main" capitalize font-medium>social media</p>
             <p text="neutral xl left">
@@ -70,6 +70,7 @@
                     rounded-xl
                     right-2
                     border-2
+                    p="x-6 y-3"
                     class="h-4/5 top-1/2 transform translate-y-[-50%]"
                     z-1
                 >
