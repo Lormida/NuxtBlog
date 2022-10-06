@@ -1,34 +1,27 @@
 <script setup lang="ts">
     interface Props {
-        rounded?: boolean
+        round?: boolean
         size?: string
         color?: string
         bgColor?: string
     }
     const props = withDefaults(defineProps<Props>(), {
-        rounded: false,
+        round: false,
         color: '#fff',
         bgColor: '#222',
-        size: '2rem',
     })
-    const getRounded = computed(() => {
-        if (props.rounded) return '100%'
-        return '5%'
-    })
+    const getround = computed(() => props.round)
 </script>
 
 <template>
-    <div class="icon-wrapper">
+    <div class="icon-wrapper" :class="{ 'rounded-full': getround }">
         <slot></slot>
     </div>
 </template>
 
 <style lang="scss" scoped>
     .icon-wrapper {
-        border-radius: v-bind(getRounded);
-        width: v-bind(size);
-        height: v-bind(size);
-        padding: 0.5em;
+        padding: 0.2em;
         display: flex;
         justify-content: center;
         align-items: center;

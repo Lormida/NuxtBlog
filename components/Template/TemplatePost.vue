@@ -5,7 +5,7 @@
     const controlButtons = [
         {
             text: 'Newest',
-            color: 'rgba(253,253,253,0.8)',
+            color: 'white',
             bgColor: 'rgba(15,15,15,.9)',
             icon: 'i-carbon-network-overlay',
         },
@@ -98,7 +98,6 @@
                                                 'selected-item': selected,
                                             }"
                                         >
-                                            <CheckIcon v-show="selected" />
                                             {{ person.name }}
                                         </li>
                                     </ListboxOption>

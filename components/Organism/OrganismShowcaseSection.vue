@@ -10,6 +10,8 @@
                         Discover Your Digital Art & Collect NFTs
                     </p>
                     <VButton
+                        border-2
+                        border-on
                         class="font-semibold text-2xl"
                         color="rgba(var(--main))"
                         bg-color="rgba(var(--btnMain))"

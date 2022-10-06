@@ -29,7 +29,15 @@
                 class="icon-search text-anti-main w-70 py-2 px-3 text-2xl rounded-lg border-2 border-neutral"
                 placeholder="Search..."
             />
-            <VButton bg-color="rgba(var(--btnMain))" color="white" text-2xl round position-icon="left">
+            <VButton
+                border-2
+                bg-color="rgba(var(--btnMain))"
+                color="rgba(var(--main)"
+                text-2xl
+                font-semibold
+                round
+                position-icon="left"
+            >
                 <span i-carbon-exit></span>
                 Login
             </VButton>
