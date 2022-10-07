@@ -2,13 +2,17 @@
     const props = defineProps<{
         src: string
         round?: boolean
+        name: string | number
     }>()
 
     const tags = ['Music', 'Celebrities', 'Game']
 </script>
 <template>
     <div flex="~ col" gap-y-5>
-        <img :src="src" :class="{ 'rounded-2xl': round }" alt="picture" />
+        <NuxtLink :to="`/post/${props.name}`">
+            <img :src="src" :class="{ 'rounded-2xl': round }" alt="picture" />
+        </NuxtLink>
+
         <div w-full flex items-center justify-between>
             <p text="2xl anti-main-accent" font-medium capitalize>the paradox forge</p>
             <div rounded-md flex justify-items items-center p="x-3 y-2" border-2 border-badge-main text-badge-main>

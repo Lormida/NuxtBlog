@@ -1,8 +1,4 @@
-<script setup lang="ts">
-    definePageMeta({
-        layout: 'default',
-    })
-</script>
+<script setup lang="ts"></script>
 
 <template>
     <main flex="~ col" h-full gap-y-32>

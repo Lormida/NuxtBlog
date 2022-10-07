@@ -9,20 +9,22 @@
                     <p class="max-w-[580px] font-bold text-(anti-main-accent 6xl)">
                         Discover Your Digital Art & Collect NFTs
                     </p>
-                    <VButton
-                        border-2
-                        p="x-14 y-5"
-                        class="font-semibold text-2xl"
-                        color="rgba(var(--main))"
-                        bg-color="rgba(var(--btnMain))"
-                        position-icon="right"
-                        round
-                    >
-                        <template #icon>
-                            <span i-carbon-direction-straight-right></span>
-                        </template>
-                        Post
-                    </VButton>
+                    <NuxtLink :to="`/profile/andrew-ananenko`">
+                        <VButton
+                            border-2
+                            p="x-14 y-5"
+                            class="font-semibold text-2xl"
+                            color="rgba(var(--main))"
+                            bg-color="rgba(var(--btnMain))"
+                            position-icon="right"
+                            round
+                        >
+                            <template #icon>
+                                <span i-carbon-direction-straight-right></span>
+                            </template>
+                            Post
+                        </VButton>
+                    </NuxtLink>
                 </div>
                 <div class="flex justify-between max-w-[450px] w-full">
                     <AtomRateStats v-for="el in 3" :key="el">

@@ -26,9 +26,11 @@
 
         <template #logic-bar>
             <input
-                class="icon-search text-anti-main w-70 py-2 px-3 text-2xl rounded-lg border-2 border-neutral"
+                p="y-2 x-3"
+                class="icon-search text-anti-main w-70 text-2xl rounded-lg border-2 border-neutral"
                 placeholder="Search..."
             />
+
             <VButton
                 border-2
                 p="x-6 y-3"

@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
-<template></template>
+<template>
+    <OrganismPageProfile></OrganismPageProfile>
+</template>
 
 <style lang="scss" scoped></style>
