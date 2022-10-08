@@ -11,7 +11,7 @@
     <TemplateGlobalHeader class="bg-main-weak-anti border-b px-5 border-neutral rounded-t-lg">
         <template #logo>
             <span class="i-carbon-3d-print-mesh text-anti-main text-4xl"></span>
-            <p class="text-4xl text-anti-main font-bold">Cyber Blog</p>
+            <NuxtLink to="/" class="text-4xl text-anti-main font-bold">Cyber Blog</NuxtLink>
             <MoleculeTogglerTheme col-span-2 />
         </template>
 
@@ -30,7 +30,7 @@
                 class="icon-search text-anti-main w-70 text-2xl rounded-lg border-2 border-neutral"
                 placeholder="Search..."
             />
-            <NuxtLink :to="'/login'">
+            <NuxtLink :to="'/auth/login'">
                 <VButton
                     border-2
                     p="x-6 y-3"

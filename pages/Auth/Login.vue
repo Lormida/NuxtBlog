@@ -8,91 +8,20 @@
     <div class="container-auth-inner">
         <div class="w-1/2 bg-side rounded-l-3xl"></div>
 
-        <div class="w-1/2" flex justify-center items-center py-8>
-            <div class="w-3/4" flex="~ col" gap-y-6>
-                <p text="5xl white/80 center" font-mono font-semibold tracking-2 mb-10>Login</p>
+        <div class="w-1/2" flex="~ col" justify-center items-center py-8 gap-y-6>
+            <OrganismFormLogin></OrganismFormLogin>
 
-                <div flex items-center justify-between>
-                    <VButton
-                        color="rgba(var(--neutral))"
-                        bg-color="rgba(var(--black))"
-                        position-icon="left"
-                        text-xl
-                        font-medium
-                        border="2 neutral"
-                        rounded-xl
-                        p="x-5 y-4"
-                    >
-                        <template #icon>
-                            <span i-carbon-logo-google></span>
-                        </template>
-                        Log in with Google
-                    </VButton>
-                    <VButton
-                        color="rgba(var(--neutral))"
-                        bg-color="rgba(var(--black))"
-                        position-icon="left"
-                        text-xl
-                        font-medium
-                        border="2 neutral"
-                        rounded-xl
-                        p="x-5 y-4"
-                    >
-                        <template #icon>
-                            <span i-carbon-logo-facebook></span>
-                        </template>
-                        Log in with Facebook
-                    </VButton>
-                </div>
-
-                <div flex items-center gap-x-5>
-                    <div w-full bg-neutral class="h-[2px]"></div>
-                    <span text="2xl neutral" font-semibold uppercase>or</span>
-                    <div w-full bg-neutral class="h-[2px]"></div>
-                </div>
-
-                <MoleculeInputControl
-                    label="Email"
-                    color-title="rgba(255,255,255,0.8)"
-                    placeholder="mail@example.com"
-                />
-                <MoleculeInputControl
-                    label="Password"
-                    color-title="rgba(255,255,255,0.8)"
-                    placeholder="Min of 6 characters"
-                />
-
-                <div flex justify-between my-5>
-                    <VCheckbox class="text-white/80 font-medium" label="Remember me" :checked="true"></VCheckbox>
-
-                    <button text="2xl neutral" duration-300 hover:text-light-500 font-medium>Forgot password?</button>
-                </div>
-
-                <button
-                    p="x-3 y-5"
-                    font="medium mono"
-                    duration-300
-                    opacity-40
-                    rounded-xl
-                    hover:opacity-90
-                    text="white 3xl"
-                    class="fetch-button"
+            <div flex items-center justify-end gap-x-5 text="xl light-500/70 right" font="medium">
+                Yet don't have an account?
+                <NuxtLink
+                    :to="'signup'"
+                    class="duration-300 text-emerald-500 font-semibold"
+                    hover="text-light-500 decoration-emerald-500 cursor-pointer scale-115"
+                    underline="~ offset-8"
+                    decoration="2 light-500"
                 >
-                    Login
-                </button>
-
-                <div flex items-center justify-end gap-x-5 text="xl light-500/70 right" font="medium">
-                    Yet don't have an account?
-                    <NuxtLink
-                        :to="'signup'"
-                        class="duration-300 text-emerald-500 font-semibold"
-                        hover="text-light-500 decoration-emerald-500 cursor-pointer scale-115"
-                        underline="~ offset-8"
-                        decoration="2 light-500"
-                    >
-                        Sign up
-                    </NuxtLink>
-                </div>
+                    Sign up
+                </NuxtLink>
             </div>
         </div>
     </div>
