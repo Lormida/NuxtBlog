@@ -1,0 +1,39 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Profile {
+    id          String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+    created_at  DateTime  @default(now()) @db.Timestamptz(6)
+    name        String    @unique @db.VarChar
+    img_cover   String?   @db.VarChar
+    modified_at DateTime? @default(now()) @db.Timestamptz(6)
+    is_visible  Boolean   @default(true)
+}
+
+model ContentData {
+    title   String   @unique @db.VarChar
+    body    String   @unique @db.VarChar
+    sources String[] @db.VarChar
+    id      String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+}
+
+model LikeData {
+    significance String
+    id           String @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+}
+
+model Post {
+    created_at  DateTime  @default(now()) @db.Timestamptz(6)
+    name        String    @unique @db.VarChar
+    img_cover   String?   @db.VarChar
+    modified_at DateTime? @default(now()) @db.Timestamptz(6)
+    is_visible  Boolean   @default(true)
+    id          String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+}
+
