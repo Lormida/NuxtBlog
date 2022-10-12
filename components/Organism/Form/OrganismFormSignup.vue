@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const router = useRouter();
-const supabase = useSupabaseClient();
 
 const signupData = reactive({
   email: null,

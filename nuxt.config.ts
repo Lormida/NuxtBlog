@@ -3,7 +3,7 @@
 import { transformerDirectives, transformerVariantGroup } from "unocss";
 
 export default defineNuxtConfig({
-  modules: ["@vueuse/nuxt", "@unocss/nuxt", "@pinia/nuxt", "@nuxtjs/supabase"],
+  modules: ["@vueuse/nuxt", "@unocss/nuxt", "@pinia/nuxt"],
   unocss: {
     // presets
     preflight: true,

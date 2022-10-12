@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const supabase = useSupabaseClient();
-
 async function login() {}
 async function logout() {}
 
