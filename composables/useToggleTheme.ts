@@ -1,9 +1,9 @@
 export const useToggleTheme = () => {
-    const color = useColorMode()
+  const color = useColorMode();
 
-    function toggleTheme() {
-        color.value = color.value === 'light' ? 'dark' : 'light'
-    }
+  function toggleTheme() {
+    color.value = color.value === "light" ? "dark" : "light";
+  }
 
-    return { toggleTheme }
-}
+  return { toggleTheme };
+};
