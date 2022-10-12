@@ -7,26 +7,7 @@ const loginData = reactive({
   password: null,
 });
 
-async function login() {
-  if (loginData.email && loginData.password) {
-    try {
-      const data = await supabase.auth.signIn({
-        email: loginData.email,
-        password: loginData.password,
-      });
-      if (data.error) {
-        throw data.error;
-      } else {
-        console.log("success");
-        router.push("/");
-      }
-    } catch (e) {
-      console.log("Error:", e);
-    }
-  } else {
-    alert("Incorrect input data");
-  }
-}
+async function login() {}
 </script>
 
 <template>
