@@ -146,8 +146,8 @@ const selectedPerson = ref(people[2]);
     <template #cards>
       <MoleculeCardPost
         v-for="card in 10"
-        :name="card"
         :key="card"
+        :name="card"
         round
         :src="sourceImage"
       />

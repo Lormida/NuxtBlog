@@ -1,39 +1,63 @@
 generator client {
-    provider = "prisma-client-js"
+    provider        = "prisma-client-js"
+    previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
-    provider = "postgresql"
-    url      = env("DATABASE_URL")
+    provider             = "mysql"
+    url                  = env("DATABASE_URL")
+    referentialIntegrity = "prisma"
 }
 
-model Profile {
-    id          String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-    created_at  DateTime  @default(now()) @db.Timestamptz(6)
-    name        String    @unique @db.VarChar
-    img_cover   String?   @db.VarChar
-    modified_at DateTime? @default(now()) @db.Timestamptz(6)
-    is_visible  Boolean   @default(true)
-}
-
-model ContentData {
-    title   String   @unique @db.VarChar
-    body    String   @unique @db.VarChar
-    sources String[] @db.VarChar
-    id      String   @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
-}
-
-model LikeData {
-    significance String
-    id           String @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+model User {
+    id          String     @id @default(uuid())
+    created_at  DateTime   @default(now())
+    name        String     @unique
+    role        Role       @default(STANDARD)
+    img_cover   String?
+    modified_at DateTime?  @default(now())
+    is_visible  Boolean    @default(true)
+    posts       Post[]
+    likes       LikeData[]
 }
 
 model Post {
-    created_at  DateTime  @default(now()) @db.Timestamptz(6)
-    name        String    @unique @db.VarChar
-    img_cover   String?   @db.VarChar
-    modified_at DateTime? @default(now()) @db.Timestamptz(6)
-    is_visible  Boolean   @default(true)
-    id          String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+    id          String       @id @default(uuid())
+    created_at  DateTime     @default(now())
+    name        String       @unique
+    img_cover   String?
+    is_visible  Boolean      @default(true)
+    modified_at DateTime?    @default(now())
+    author      User         @relation(fields: [authorId], references: [id])
+    authorId    String
+    likes       LikeData[]
+    content     ContentData?
 }
 
+model ContentData {
+    id     String @id @default(uuid())
+    title  String @unique
+    body   String @unique
+    post   Post   @relation(fields: [postId], references: [id])
+    postId String @unique
+}
+
+model LikeData {
+    id           String       @id @default(uuid())
+    significance Significance @default(STANDARD)
+    post         Post         @relation(fields: [postId], references: [id])
+    postId       String
+    user         User         @relation(fields: [userId], references: [id])
+    userId       String
+}
+
+enum Significance {
+    STANDARD
+    HIGH
+    GODLIKE
+}
+
+enum Role {
+    STANDARD
+    ADMIN
+}
